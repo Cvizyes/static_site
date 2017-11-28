@@ -1,0 +1,2 @@
+class Libraty < ApplicationRecord
+end

@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Libraties</h1>
+<%= link_to 'home', new_libraty_path %>
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Pnumber</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @libraties.each do |libraty| %>
+      <tr>
+        <td><%= libraty.name %></td>
+        <td><%= libraty.Pnumber %></td>
+        <td><%= link_to 'Show', libraty %></td>
+        <td><%= link_to 'Edit', edit_libraty_path(libraty) %></td>
+        <td><%= link_to 'Destroy', libraty, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Libraty', new_libraty_path %>
